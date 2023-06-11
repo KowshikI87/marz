@@ -29,7 +29,7 @@ const ProductList = (props: ProductListProps) => {
                         Product ID
                     </th>
                     <th scope="col" className="px-6 py-3">
-                        Product
+                        Product Name
                     </th>
                 </tr>
             </thead>
