@@ -18,7 +18,7 @@ app.get("/products", catchError(async (req, res) => {
 }));
 
 //Error handler
-app.use((err, req, res, next) => {
+app.use((err, req, res, _next) => {
   console.log(err);
   res.status(404).send(err.message);
 });

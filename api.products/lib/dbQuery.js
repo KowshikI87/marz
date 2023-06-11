@@ -1,3 +1,4 @@
+/* eslint-disable no-process-env */
 const mariadb = require("mariadb");
 
 const logQuery = (statement, parameters) => {
@@ -9,10 +10,10 @@ const logQuery = (statement, parameters) => {
 module.exports = {
   async dbQuery(statement, ...parameters) {
     const pool = mariadb.createPool({
-      host: "mariadb",
-      user: "interviewer",
-      password: "changeme",
-      database: "marz",
+      host: process.env.MYSQL_HOST,
+      user: process.env.MYSQL_USER,
+      password: process.env.MYSQL_PASSWORD,
+      database: process.env.MYSQL_DATABASE,
       connectionLimit: 5
     });
 

@@ -71,6 +71,24 @@ services:
      - ./db/data.sql:/docker-entrypoint-initdb.d/2.sql
     networks:
       - app_network
+  
+  api-products:
+    image: api-products:latest
+    container_name: api-products
+    ports:
+      - 8080:8080
+    depends_on:
+      - mariadb
+    build:
+      context: ./api.products
+      dockerfile: Dockerfile
+    environment:
+    - MYSQL_HOST=mariadb
+    - MYSQL_USER=interviewer
+    - MYSQL_PASSWORD=changeme
+    - MYSQL_DATABASE=marz
+    networks:
+      - app_network
 
 networks:
   app_network:
