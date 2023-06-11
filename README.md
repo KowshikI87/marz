@@ -10,7 +10,7 @@ The application is comprised of 4 parts
 4. db -> mariadb
 
 ## Requirements
-
+    
 1. Docker [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 2. Docker Compose [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 3. Node v17.9.1 [https://nodejs.org/fr/blog/release/v17.9.1/](https://nodejs.org/fr/blog/release/v17.9.1/)
