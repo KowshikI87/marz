@@ -3,7 +3,6 @@ const express = require("express");
 const morgan = require("morgan");
 const catchError = require("./lib/catch-error");
 
-
 const app = express();
 const host = "localhost";
 const port = 8080;
@@ -17,7 +16,6 @@ app.get("/products", catchError(async (req, res) => {
   let activeProducts = products.filter(product => {
     return product.ProductStatus === "Active";
   });
-  console.log(res);
   res.json(activeProducts);
 }));
 
@@ -28,4 +26,3 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
-
