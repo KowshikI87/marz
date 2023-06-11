@@ -9,6 +9,7 @@ const logQuery = (statement, parameters) => {
 module.exports = {
   async dbQuery(statement, ...parameters) {
     const pool = mariadb.createPool({
+      host: "mariadb",
       user: "interviewer",
       password: "changeme",
       database: "marz",

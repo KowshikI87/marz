@@ -4,10 +4,8 @@ const morgan = require("morgan");
 const catchError = require("./lib/catch-error");
 
 const app = express();
-const host = "localhost";
-const port = 8080;
 
-//request logging
+//logging requests
 app.use(morgan("common"));
 
 //main route: returns active product list
