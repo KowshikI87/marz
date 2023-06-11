@@ -13,11 +13,10 @@ export interface OrderData {
   QA: Order[],
 }
 
-export interface Product {
+export interface ProductProps {
     ProductID: number;
     ProductName: string;
     ProductPhotoURL: string;
-    ProductStatus: string;
 }
 
 export interface DraggableItemProps extends Order{
@@ -33,7 +32,7 @@ export interface DraggableListProps {
 };
 
 export interface ProductListProps {
-    products: Product[];
+    products: ProductProps[];
 }
 
 export interface HeaderLink {
