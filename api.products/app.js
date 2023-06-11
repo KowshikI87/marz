@@ -17,6 +17,7 @@ app.get("/products", catchError(async (req, res) => {
   let activeProducts = products.filter(product => {
     return product.ProductStatus === "Active";
   });
+  console.log(res);
   res.json(activeProducts);
 }));
 
@@ -26,9 +27,5 @@ app.use((err, req, res, next) => {
   res.status(404).send(err.message);
 });
 
-//Listener
-app.listen(port, host, () => {
-  console.log(`Product server is listening on port ${port} of ${host}!`);
-});
-
+module.exports = app;
 
