@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react'
 import ProductList from './ProductList';
-import { REPL_MODE_STRICT } from 'repl';
 
 describe('ProductList', () => {
   it('renderProductList', async () => {
