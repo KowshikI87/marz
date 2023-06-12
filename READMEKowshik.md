@@ -26,3 +26,12 @@ This ToDO was found in the ProductsPage.tsx
   Then backend: Interact with DB --> Basic DB Connection --> Skeleton backend --> Test --> Refactor --> Test again
 
   Typically, for the backend server, we would have multiple routes file. Each route would contain a list of similar routes. These routes file would then be imported into the app.js file. But in this case, it seems that all the routes our api.products server will serve will be similar and be in the same category. So I decided not to use a router folder and further complicate the app.
+
+
+helpful to remove all images: docker rmi $(docker image ls -a -q)
+
+and then run docker compose up -d
+
+for changing the product URL, I changed it right when inserting the data instead of using UPDATE statement later. This of course would not be doable in a production system.
+
+So maybe mention that I would look at cross browser display compatiblity issue later
