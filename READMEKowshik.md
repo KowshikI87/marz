@@ -52,14 +52,15 @@ For changing the product URL, I changed the `INSERT` statement to use working ph
 ## Misc.
 
 This TODO was found in the `ProductsPage.tsx` file
+```javascript
   /*
     TODO:
       When the drag ends we want to keep the status persistant across logins. 
       Instead of modifying the data locally we want to do it serverside via a post
       request
   */
-
-  Since the `README.md` file did not say anything regarding this TODO, I ignored it
+```
+Since the `README.md` file did not say anything regarding this TODO, I ignored it
 
 
 # Future Work
