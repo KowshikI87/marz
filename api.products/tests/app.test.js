@@ -15,7 +15,7 @@ describe("Test GET /products route", () => {
 
     dbFunctions.getProducts.mockResolvedValue(mockProducts);
 
-    const response = await request(app).get("/products");
+    const response = await request(app).get("/api/products");
     expect(response.statusCode).toBe(200);
     expect(response.type).toBe("application/json");
     expect(Array.isArray(response.body)).toBeTruthy();
@@ -32,7 +32,7 @@ describe("Test GET /products route", () => {
   test("Handle Errors", async() => {
     dbFunctions.getProducts.mockRejectedValue(new Error('Database query failed'));
 
-    const response = await request(app).get("/products");
+    const response = await request(app).get("/api/products");
     expect(response.statusCode).toBe(404);
     expect(response.text).toBe("Database query failed");
   });
